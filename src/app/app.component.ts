@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  selectedMenuElement: string;
+
+  constructor() {
+  }
+
+  onMenuSelect(selectedMenuElement: string) {
+    this.selectedMenuElement = selectedMenuElement;
+  }
 }

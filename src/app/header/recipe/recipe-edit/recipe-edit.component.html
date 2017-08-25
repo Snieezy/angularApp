@@ -1,0 +1,14 @@
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name"  [(ngModel)] = "recipeToEdit.name">
+  </div>
+  <div class="form-group">
+    <label for="descr">Description:</label>
+    <textarea class="form-control" id="descr" [(ngModel)] = "recipeToEdit.description"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="img">Image URL:</label>
+    <input type="text" class="form-control" id="img" [(ngModel)] = "recipeToEdit.imagePath">
+    <img src="{{recipeToEdit.imagePath}}"  style="margin-top:10px; height: 60px;">
+  </div>
+  <button type="submit" class="btn btn-primary pull-right" (click)="onSaveRecipe()">Save</button>
